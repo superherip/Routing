@@ -1,5 +1,7 @@
 <?php
 
+//
+
 class Request {
 
   public function __construct($uri, $params = []) {
@@ -20,7 +22,7 @@ class Request {
     if (!isset($this->params[$key])) {
 
       throw new \InvalidArgumentException("The request parameter with key '$key' is invalid.");
-      
+
     }
     return $this->params[$key];
   }
